@@ -1,4 +1,5 @@
 # Developer Portfolio:
+![Captura de pantalla 2023-12-30 a las 18 58 31](https://github.com/franciscof12/astro-portfolio-web/assets/123760628/d93457ce-b2cd-43d0-bde7-a5618d24c3e5)
 
 ## 🚀 Quick Start
 
@@ -32,6 +33,3 @@ To get started with the Astro Starter Kit: Basics, follow these steps:
 
 7. Open your browser and visit `http://localhost:4321` to see your Astro project in action.
 
-## 📂 Project Structure
-
-Inside your Astro project, you'll find the following folders and files:
