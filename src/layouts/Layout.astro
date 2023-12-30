@@ -1,9 +1,10 @@
 ---
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 import Header from "../components/Header.astro";
 import "@fontsource/ubuntu-mono";
 ---
@@ -15,7 +16,7 @@ import "@fontsource/ubuntu-mono";
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta name="generator" content={description} />
 		<title>{title}</title>
 	</head>
 	<body>

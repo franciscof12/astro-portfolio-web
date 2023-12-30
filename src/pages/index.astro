@@ -1,20 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
-import LinkedinIcon from "../components/LinkedinIcon.astro";
-import GithubIcon from "../components/GithubIcon.astro";
+import LinkedinIcon from "../icons/LinkedinIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import SocialPill from "../components/SocialPill.astro";
+import EmailIcon from "../icons/EmailIcon.astro";
 ---
 
-<Layout title="Francisco Ferreira Portfolio">
+<Layout
+	title="Portfolio - Francisco Ferreira Full Stack Developer"
+	description="I'm a 20-year-old student currently studying Web Development at a higher technical school. As a young person, I firmly believe that we have endless opportunities to grow professionally and make a positive impact on the world"
+>
 	<main>
-		<section class="mx-auto lg:w-[940px] w-full py-40">
+		<section class="w-full mx-auto lg:w-[880px] py-44">
 			<section class="flex flex-row">
 				<div>
 					<h1
-						class="text-white text-5xl font-bold flex flex-col gap-x-2 pb-8 lg:flex-row"
+						class="text-white text-5xl font-bold flex flex-col gap-x-2 pb-8 gap-y-2"
 					>
 						Francisco Ferreira <a
-							href=https://www.linkedin.com/company/lifullconnect/mycompany/"
+							href='https://www.linkedin.com/company/lifullconnect/mycompany/"'
 							target="_blank"
 							rel="noopener"
 							class="flex flex-row justify-start items-center"
@@ -29,31 +34,33 @@ import GithubIcon from "../components/GithubIcon.astro";
 						</a>
 					</h1>
 					<h2 class="text-xl opacity-80">
-						Full Stack Software Developer focused on building unique
-						products. Spain, Barcelona 📍
+						Full Stack Software Developer focused on make a positive
+						impact on the industry 🙋🏻‍♂️. <span class="text-blue-100/90"
+							>Spain, Barcelona 📍</span
+						>
 					</h2>
-					<ul class="flex flex-row gap-2 pt-10">
-						<li>
-							<a
-								href="https://www.linkedin.com/in/franciscoferreiraa/"
-								target="_blank"
-								rel="noopener"><LinkedinIcon /></a
+					<nav
+						class="flex flex-col gap-y-2 lg:gap-x-4 mt-8 lg:flex-row"
+					>
+						<SocialPill>
+							<LinkedinIcon />
+							<span class="text-gray-200/90">Linkedin</span>
+						</SocialPill>
+						<SocialPill>
+							<GithubIcon />
+							<span class="text-gray-200/90">Github</span>
+						</SocialPill>
+						<SocialPill>
+							<EmailIcon />
+							<span class="text-gray-200/90"
+								>franciscoferrefc@gmail.com</span
 							>
-						</li>
-						<li>
-							<a
-								href="https://github.com/franciscof12"
-								target="_blank"
-								rel="noopener"
-							>
-								<GithubIcon />
-							</a>
-						</li>
-					</ul>
+						</SocialPill>
+					</nav>
 				</div>
 				<img
-					class="rounded-xl w-60 h-60 gap-x-2 gap-y-2"
-					src="franciscoFoto.png"
+					class="rounded-xl w-60 h-60"
+					src="franfoto.png"
 					alt="foto de francisco"
 				/>
 			</section>
