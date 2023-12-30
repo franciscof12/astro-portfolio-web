@@ -1,10 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedinIcon from "../icons/LinkedinIcon.astro";
-import GithubIcon from "../icons/GithubIcon.astro";
-import SocialPill from "../components/SocialPill.astro";
-import EmailIcon from "../icons/EmailIcon.astro";
+import Experience from "../components/Experience.astro";
+import Abt from "../components/Abt.astro";
 ---
 
 <Layout
@@ -12,58 +9,11 @@ import EmailIcon from "../icons/EmailIcon.astro";
 	description="I'm a 20-year-old student currently studying Web Development at a higher technical school. As a young person, I firmly believe that we have endless opportunities to grow professionally and make a positive impact on the world"
 >
 	<main>
-		<section class="w-full mx-auto lg:w-[880px] py-44">
-			<section class="flex flex-row">
-				<div>
-					<h1
-						class="text-white text-5xl font-bold flex flex-col gap-x-2 pb-8 gap-y-2"
-					>
-						Francisco Ferreira <a
-							href='https://www.linkedin.com/company/lifullconnect/mycompany/"'
-							target="_blank"
-							rel="noopener"
-							class="flex flex-row justify-start items-center"
-						>
-							<Badge>
-								Working at Lifull Connect <img
-									class="w-3 h-3"
-									src="lifullconnectlogo.jpeg"
-									alt=""
-								/>
-							</Badge>
-						</a>
-					</h1>
-					<h2 class="text-xl opacity-80">
-						Full Stack Software Developer focused on make a positive
-						impact on the industry 🙋🏻‍♂️. <span class="text-blue-100/90"
-							>Spain, Barcelona 📍</span
-						>
-					</h2>
-					<nav
-						class="flex flex-col gap-y-2 lg:gap-x-4 mt-8 lg:flex-row"
-					>
-						<SocialPill>
-							<LinkedinIcon />
-							<span class="text-gray-200/90">Linkedin</span>
-						</SocialPill>
-						<SocialPill>
-							<GithubIcon />
-							<span class="text-gray-200/90">Github</span>
-						</SocialPill>
-						<SocialPill>
-							<EmailIcon />
-							<span class="text-gray-200/90"
-								>franciscoferrefc@gmail.com</span
-							>
-						</SocialPill>
-					</nav>
-				</div>
-				<img
-					class="rounded-xl w-60 h-60"
-					src="franfoto.png"
-					alt="foto de francisco"
-				/>
-			</section>
+		<section class="w-full mx-auto lg:w-[880px] py-36">
+			<Abt />
+		</section>
+		<section class="w-full mx-auto lg:w-[880px] py-10">
+			<Experience />
 		</section>
 	</main>
 </Layout>
