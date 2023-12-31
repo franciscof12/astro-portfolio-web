@@ -24,3 +24,5 @@ pnpm-debug.log*
 bun.lockb
 
 env.d.ts
+
+.vscode
