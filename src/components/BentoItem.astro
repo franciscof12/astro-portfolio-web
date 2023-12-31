@@ -1,4 +1,66 @@
 ---
+import React from "../icons/React.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Node from "../icons/Node.astro";
+import HTML from "../icons/HtmlIcon.astro";
+import BOOTSTRAP from "../icons/Bootstrap.astro";
+import OpenAi from "../icons/OpenAiIcon.astro";
+import MYSQL from "../icons/MySQLIcon.astro";
+import TypeScript from "../icons/TypeScriptIcon.astro";
+import GOLANG from "../icons/GolangIcon.astro";
+
+const TAGS = {
+    REACT: {
+        name: "ReactJS",
+        class: "bg-black text-white",
+        icon: React,
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "bg-black text-white",
+        icon: Tailwind,
+    },
+    NODE: {
+        name: "NodeJS",
+        class: "bg-black text-white",
+        icon: Node,
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-black text-white",
+        icon: HTML,
+    },
+    BOOTSTRAP: {
+        name: "Bootstrap",
+        class: "bg-black text-white",
+        icon: BOOTSTRAP,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-black text-white",
+        icon: React,
+    },
+    TYPESCRIPT: {
+        name: "TypeScript",
+        class: "bg-black text-white",
+        icon: TypeScript,
+    },
+    MYSQL: {
+        name: "MySQL",
+        class: "bg-black/10 text-white",
+        icon: MYSQL,
+    },
+    OPENAI: {
+        name: "OpenAI API",
+        class: "bg-black text-white",
+        icon: OpenAi,
+    },
+    GOLANG: {
+        name: "GoLang",
+        class: "bg-black/10 text-white",
+        icon: GOLANG,
+    },
+};
 const PROJECTS = [
     {
         title: "PomoTyme",
@@ -6,18 +68,25 @@ const PROJECTS = [
             "Productivity web app. It provides a user-friendly experience for improved focus and productivity during study or work sessions. The app also integrates the ChatGPT API for an AI-powered chatbot to assist users with their queries.",
         link: "#",
         github: "https://github.com/franciscof12/PomoTyme",
-        image: "pomotyme.png",
-        tags: ["ReactJS", "NodeJs", "HTML", "BootStrap", "OpenAI API", "MySQL"],
+        image: "/pomotyme.png",
+        tags: [
+            TAGS.REACT,
+            TAGS.NODE,
+            TAGS.HTML,
+            TAGS.BOOTSTRAP,
+            TAGS.OPENAI,
+            TAGS.MYSQL,
+        ],
         colspan: "6",
     },
     {
         title: "NodeJS MVC API",
         description:
-            "This repository highlights key backend functionalities including the establishment of an API, addressing cross-origin resource sharing (CORS), and applying the MVC architectural pattern for organized API deployment.",
+            "This repository highlights key backend functionalities including the establishment of an API, addressing cross-origin resource sharing (CORS), and applying the MVC pattern for organized API.",
         link: "#",
         github: "https://github.com/franciscof12/node-api",
-        image: "nodeapi.png",
-        tags: ["NodeJS"],
+        image: "/nodeapi.png",
+        tags: [TAGS.REACT],
         colspan: "4",
     },
     {
@@ -26,8 +95,8 @@ const PROJECTS = [
             "The app allows users to translate text from one language to another. The app also supports text-to-speech functionality.",
         link: "#",
         github: "https://github.com/franciscof12/google-translate-clone",
-        image: "gtranslate.png",
-        tags: ["TypeScript", "ReactJS", "TailwindCSS", "OpenAI API"],
+        image: "/gtranslate.png",
+        tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.OPENAI],
         colspan: "4",
     },
     {
@@ -36,34 +105,48 @@ const PROJECTS = [
             "A simple CLI tool built in Go that fetches the list of repositories for a given GitHub username. The user is presented with a TUI (Text-based User Interface) from which they can navigate and select a repository to clone it to the local machine.",
         link: "#",
         github: "#",
-        image: "repocloner.png",
-        tags: ["rust", "cli", "static site generator"],
+        image: "/repocloner.png",
+        tags: [TAGS.GOLANG],
         colspan: "6",
     },
 ];
 ---
 
 {
-    PROJECTS.map(
-        ({ title, description, tags, link, github, image, colspan }) => (
-            <article
-                class={`relative rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 ${
-                    colspan === "6" ? "md:col-span-6" : "md:col-span-4"
-                } col-span-10`}
-                style={{
-                    backgroundImage: `url(${image})`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                }}
-            >
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <ul>
+    PROJECTS.map(({ title, description, tags, github, image, colspan }) => (
+        <article
+            class={`relative rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 ${
+                colspan === "6" ? "md:col-span-6" : "md:col-span-4"
+            } col-span-10 w-full h-full`}
+        >
+            <div class="select-none flex flex-col gap-1 p-6 text-md hover:opacity-90">
+                <div
+                    class="absolute left-0 top-0 bottom-0 w-full h-full opacity-55 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-20 rounded-lg"
+                    style={{
+                        backgroundImage: `url(${image})`,
+                    }}
+                />
+                <h3 class="text-2xl font-bold text-balance text-blue-300/90 mb-4">
+                    <a href={`${github}`} target="_blank" rel="noopener">
+                        {title}
+                    </a>
+                </h3>
+                <p class="max-w-xl mb-4 font-semibold text-white/80">
+                    {description}
+                </p>
+                <ul class="flex gap-2 flex-wrap h-full">
                     {tags.map((tag) => (
-                        <li>{tag}</li>
+                        <li>
+                            <span
+                                class={`z-50 flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+                            >
+                                <tag.icon class="size-4" />
+                                {tag.name}
+                            </span>
+                        </li>
                     ))}
                 </ul>
-            </article>
-        ),
-    )
+            </div>
+        </article>
+    ))
 }

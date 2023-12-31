@@ -22,3 +22,5 @@ pnpm-debug.log*
 
 # bun lock
 bun.lockb
+
+env.d.ts
