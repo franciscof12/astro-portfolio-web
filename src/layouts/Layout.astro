@@ -6,7 +6,7 @@ interface Props {
 
 const { title, description } = Astro.props;
 import Header from "../components/Header.astro";
-import '@fontsource-variable/onest';
+import "@fontsource-variable/onest";
 ---
 
 <!doctype html>
@@ -28,8 +28,9 @@ import '@fontsource-variable/onest';
 	:root {
 	}
 	html {
-		font-family: 'Onest Variable', sans-serif;
+		font-family: "Onest Variable", sans-serif;
 		color-scheme: light dark;
+		scroll-behavior: smooth;
 	}
 	body {
 		display: flex;
