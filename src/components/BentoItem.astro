@@ -1,0 +1,69 @@
+---
+const PROJECTS = [
+    {
+        title: "PomoTyme",
+        description:
+            "Productivity web app. It provides a user-friendly experience for improved focus and productivity during study or work sessions. The app also integrates the ChatGPT API for an AI-powered chatbot to assist users with their queries.",
+        link: "#",
+        github: "https://github.com/franciscof12/PomoTyme",
+        image: "pomotyme.png",
+        tags: ["ReactJS", "NodeJs", "HTML", "BootStrap", "OpenAI API", "MySQL"],
+        colspan: "6",
+    },
+    {
+        title: "NodeJS MVC API",
+        description:
+            "This repository highlights key backend functionalities including the establishment of an API, addressing cross-origin resource sharing (CORS), and applying the MVC architectural pattern for organized API deployment.",
+        link: "#",
+        github: "https://github.com/franciscof12/node-api",
+        image: "nodeapi.png",
+        tags: ["NodeJS"],
+        colspan: "4",
+    },
+    {
+        title: "Google Translate",
+        description:
+            "The app allows users to translate text from one language to another. The app also supports text-to-speech functionality.",
+        link: "#",
+        github: "https://github.com/franciscof12/google-translate-clone",
+        image: "gtranslate.png",
+        tags: ["TypeScript", "ReactJS", "TailwindCSS", "OpenAI API"],
+        colspan: "4",
+    },
+    {
+        title: "RepoCloner",
+        description:
+            "A simple CLI tool built in Go that fetches the list of repositories for a given GitHub username. The user is presented with a TUI (Text-based User Interface) from which they can navigate and select a repository to clone it to the local machine.",
+        link: "#",
+        github: "#",
+        image: "repocloner.png",
+        tags: ["rust", "cli", "static site generator"],
+        colspan: "6",
+    },
+];
+---
+
+{
+    PROJECTS.map(
+        ({ title, description, tags, link, github, image, colspan }) => (
+            <article
+                class={`relative rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 ${
+                    colspan === "6" ? "md:col-span-6" : "md:col-span-4"
+                } col-span-10`}
+                style={{
+                    backgroundImage: `url(${image})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                }}
+            >
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <ul>
+                    {tags.map((tag) => (
+                        <li>{tag}</li>
+                    ))}
+                </ul>
+            </article>
+        ),
+    )
+}

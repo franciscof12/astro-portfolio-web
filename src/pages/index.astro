@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Experience.astro";
 import Abt from "../components/Abt.astro";
+import Education from "../components/Education.astro";
+import BentoProjects from "../components/BentoProjects.astro";
 ---
 
 <Layout
@@ -9,11 +11,9 @@ import Abt from "../components/Abt.astro";
 	description="I'm a 20-year-old student currently studying Web Development at a higher technical school. As a young person, I firmly believe that we have endless opportunities to grow professionally and make a positive impact on the world"
 >
 	<main>
-		<section class="w-full mx-auto lg:w-[880px] py-36">
-			<Abt />
-		</section>
-		<section class="w-full mx-auto lg:w-[880px] py-10">
-			<Experience />
-		</section>
+		<Abt />
+		<Experience />
+		<Education />
+		<BentoProjects />
 	</main>
 </Layout>
