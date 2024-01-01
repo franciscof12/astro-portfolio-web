@@ -1,4 +1,4 @@
-# Developer Portfolio:
+# Developer Portfolio
 ![image](https://github.com/franciscof12/astro-portfolio-web/assets/123760628/f165dcc7-7b43-4a51-b0d6-0e1496459420)
 
 # Link
