@@ -34,5 +34,5 @@ To get started with the Astro Starter Kit: Basics, follow these steps:
     bun run dev
     ```
 
-7. Open your browser and visit `http://localhost:4321` to see your Astro project in action.
+7. Open your browser and visit `http://localhost:4321` to see your project in action.
 
